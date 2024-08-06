@@ -13,12 +13,14 @@ public class Reversestringwithoutaffectingspecialcharacters {
        while(left<right) {
     	  if(!Character.isLetterOrDigit(ch[left])) {
     		 left++; 
-    	  }else if(Character.isLetterOrDigit(ch[right])) {
+    	  }else if(!Character.isLetterOrDigit(ch[right])) {
     		  right--;
     	  }else {
     		  char temp=ch[left];
     		  ch[left]=ch[right];
     		  ch[right]=temp;
+    		  left++;
+    		  right--;
     	  }
        }
        

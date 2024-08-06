@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.OptionalDouble;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Java8Dummy {
 
@@ -75,6 +76,9 @@ public class Java8Dummy {
 		String s="raghuReddy";
 		char[] c=s.toCharArray();
 		s.chars().mapToObj(e -> (char)e).collect(Collectors.groupingBy(t -> t,Collectors.counting()));
+		
+		Stream<Integer> st=Stream.of(4,8,3,10);
+		System.out.println(st.peek(System.out::print).anyMatch(x->x%10==0));
 		
 	}
 

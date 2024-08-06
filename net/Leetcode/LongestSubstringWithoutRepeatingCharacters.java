@@ -4,21 +4,25 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
 	public static void main(String[] args) {
 
-		String s="pwwkew";
-		String result=String.valueOf(s.charAt(0));
-		String finalResult=result;
-		for(int i=1;i<s.length();i++) {
+		String s="abcabcbb";
+		if(s!="") {
+		String result="";
+		String finalResult="";
+		int index=0;
+		for(int i=0;i<s.length();i++) {
 			if(result.contains(String.valueOf(s.charAt(i)))) {
+				i=index++;
 				result=String.valueOf(s.charAt(i));
 			}else {
 				result=result+s.charAt(i);
-				finalResult=result;
 			}
 			if(finalResult.length()<result.length()) {
 				finalResult=result;
 			}
 		}
 		System.out.println(finalResult);
+		}
+		System.out.println("0");
 	}
 
 }

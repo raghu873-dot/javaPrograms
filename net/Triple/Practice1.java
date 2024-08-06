@@ -3,24 +3,22 @@ package com.net.Triple;
 public class Practice1 {
 
 		public static void main(String[] args) {
-			String s="a,b$c43";
+			int [] array= {3,2,4,6,5,7,8,9,10,11,13,12};
 			
-			char [] ch=s.toCharArray();
-			
-			int left=0;
-			int right=ch.length-1;
-			
-			while(left<right) {
+			for(int i=0;i<array.length;i++) {
 				
-				
- 					char temp = ch[left];
- 					ch[left] = ch[right];
- 					ch[right] = temp;
- 					left++;
- 					right--;
- 				
+				for(int j=i+1;j<array.length;j++) {
+					if(array[i]>array[j]) {
+						int temp=array[i];
+						array[i]=array[j];
+						array[j]=temp;
+					}
+				}
 			}
 			
-			System.out.println(new String(ch));
+			for(int i=0;i<array.length;i++) {
+				System.out.println(array[i]);
+			}
+			
 		}
-}
+	}

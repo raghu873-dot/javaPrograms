@@ -9,7 +9,7 @@ public class CheckWhetherTwoStringsareAlmostEquivalent {
 		
 		//leetcode = 2068
 		
-		String word1 = "aaaa", word2 = "aaaa";
+		String word1 = "bbbb", word2 = "bbbb";
 //				Output: true
 //				Explanation: The differences between the frequencies of each letter in word1 and word2 are at most 3:
 //				- 'a' appears 1 time in word1 and 4 times in word2. The difference is 3.
