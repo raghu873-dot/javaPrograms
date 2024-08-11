@@ -3,22 +3,27 @@ package com.net.Triple;
 public class Practice1 {
 
 		public static void main(String[] args) {
-			int [] array= {3,2,4,6,5,7,8,9,10,11,13,12};
-			
-			for(int i=0;i<array.length;i++) {
-				
-				for(int j=i+1;j<array.length;j++) {
-					if(array[i]>array[j]) {
-						int temp=array[i];
-						array[i]=array[j];
-						array[j]=temp;
-					}
-				}
-			}
-			
-			for(int i=0;i<array.length;i++) {
-				System.out.println(array[i]);
-			}
-			
+			 int[] nums = {1, 2, 3, 4, 5, 6, 7};
+		     int k = 8;
+		     
+		     k=k%nums.length;
+		     reverse(nums,0,nums.length-1);
+		     reverse(nums,0,k-1);
+		     reverse(nums,k,nums.length-1);
+		     
+		     for(int i=0;i<nums.length;i++) {
+		    	 System.out.println(nums[i]);
+		     }
 		}
+		
+		private static void reverse(int [] nums,int start,int end) {
+			while(start<=end) {
+				int temp=nums[start];
+				nums[start]=nums[end];
+				nums[end]=temp;
+				start++;
+				end--;
+			}
+		}
+		
 	}

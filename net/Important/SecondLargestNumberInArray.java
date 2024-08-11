@@ -1,4 +1,4 @@
-package com.net.programs;
+package com.net.Important;
 
 public class SecondLargestNumberInArray {
 	public static void main(String[] args) {

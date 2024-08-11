@@ -1,10 +1,10 @@
-package com.net.Leetcode;
+package com.net.Important;
 
 public class LongestSubstringWithoutRepeatingCharacters {
 
 	public static void main(String[] args) {
 
-		String s="abcabcbb";
+		String s="dvdf";
 		if(s!="") {
 		String result="";
 		String finalResult="";

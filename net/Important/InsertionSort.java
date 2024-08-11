@@ -1,4 +1,4 @@
-package com.net.programs;
+package com.net.Important;
 
 public class InsertionSort {
 
@@ -7,16 +7,17 @@ public class InsertionSort {
 		
 		
 		for(int i=1;i<arr.length;i++) {
-			int temp=arr[i];
-			int j=i;
+			int key=arr[i];
+			int j=i-1;
 			
-			while(j>0 && arr[j-1]>arr[j]) {
-				arr[j]=arr[j-1];
-				j=j-1;
+			while(j>=0 && arr[j]>key) {
+				arr[j+1]=arr[j];
+				j--;
 			}
-			arr[j]=temp;
+			arr[j+1]=key;
 			
 		}
+		
 		for(int i=0;i<arr.length;i++) {
 			System.out.println(arr[i]);
 		}
