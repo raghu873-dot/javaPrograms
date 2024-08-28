@@ -15,16 +15,12 @@ public class LongestPalindromeSubString {
 				if(ch[i]==ch[j]) {
 					String subString=s.substring(i,j+1);
 					 swapSubString=swap(subString);
-					if(subString.equals(swapSubString)) {
-						break;
+					if(subString.equals(swapSubString) && swapSubString.length()>largestPali.length()) {
+						largestPali=swapSubString;
 					}
 				}
 				j--;
 			}
-			if(swapSubString.length()>largestPali.length()) {
-				largestPali=swapSubString;
-			}
-			
 		}
 		System.out.println(largestPali);
 	}

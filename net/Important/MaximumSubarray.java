@@ -1,4 +1,4 @@
-package com.net.Leetcode;
+package com.net.Important;
 
 public class MaximumSubarray {
 
